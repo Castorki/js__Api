@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/hw2/img/background.jpg);
+
+}
+
+.center {
+    margin-top: 10px;
+    padding-left: calc(50% - 570px);
+    padding-right: calc(50% - 570px);
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.header {
+
+    &__title {
+
+        color: rgb(48, 1, 217);
+        text-shadow: 5px 5px #3588d4;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__images {
+        &_image {
+            position: relative;
+        }
+
+        &_fastNavigation {
+            display: flex;
+            position: absolute;
+            top: 85%;
+            left: 45%;
+            gap: 8px;
+
+            &_element {
+                padding: 10px 10px;
+                border: none;
+                border-radius: 50px;
+                opacity: 60%;
+            }
+        }
+    }
+}
