@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo of the Day</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/87017bb626.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createApp();
+        })
+    </script>
+</head>
+
+<body>
+    <div class="main__container center">
+        <div class="photographer">
+            <div class="photographer__avatar">
+                <img class="photographer__avatar_imeg" src="/hw3/img/avatar.png" alt="Photographer avatar">
+            </div>
+            <h2 class="photographer__name">Лак Блайк</h2>
+        </div>
+        <div class="loader fa-5x">
+            <i class="fa-solid fa-sync fa-spin"></i>
+        </div>
+        <div class="photo">
+            <img src="" alt="Photo of the day" class="photo__element">
+            <div class="photo__history">
+                <div class="photo__history_previes">
+                    <img src="/hw3/img/previesArrow.png" alt="Previes arrow">
+                </div>
+                <div class="photo__history_next">
+                    <img src="/hw3/img/nextArrow.png" alt="Next arrow">
+                </div>
+            </div>
+        </div>
+        <div class="extra">
+            <div class="extra__like">
+                <p class="extra__like_count">0</p>
+                <img class="extra__like_button" src="/hw3/img/like.png" alt="like">
+            </div>
+            <details class="extra__info">
+                <summary class="extra__info_summary">
+                    Информация о фотографе
+                </summary>
+                <p class="extra__info_text">
+                    Лак Блайк никогда не искал славы — она находила его сама, будто свет в нужный момент. Он снимал на
+                    старую плёночную камеру, веря, что каждый кадр — это лотерея. <br>
+                    Однажды в дождливом переулке он заметил девушку с зонтом, раскрашенным как крыло бабочки. Щёлк — и
+                    кадр ушёл в журнал "National Geographic". Потом был бродячий кот, сидевший на плече бездомного
+                    скрипача. Щёлк — и фото взяли на выставку в Париже. <br>
+                    — Тебе просто везёт, — говорили коллеги.<br>
+                    Лак лишь смеялся: — Везёт тем, кто не ждёт идеального света.<br>
+                    Его секрет был прост: мир — это тёмная комната, а случай — лучший проявитель.
+                </p>
+            </details>
+            <div class="extra__history">
+                <p class="extra__history_title">История просмотра</p>
+                <img class="extra__history_close" src="/hw3/img/close.png" alt="close history">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

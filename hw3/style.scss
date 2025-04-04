@@ -1,0 +1,164 @@
+@keyframes flip-vertical-right {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Underdog';
+    background-image: url(/hw3/img/bg.jpg);
+    background-size: cover;
+
+}
+
+
+
+.center {
+    padding-left: calc(50% - 300px);
+    padding-right: calc(50% - 300px);
+}
+
+.photographer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+}
+
+.photo {
+    justify-content: center;
+
+    &__element {
+        display: none;
+    }
+
+    &__history {
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        &_previes {
+            margin-right: 20px;
+        }
+
+        &_imeg {
+            animation: flip-vertical-right 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+            box-shadow:
+                1em 5px 5px gray,
+                -1em 0.5em 0.4em gray;
+        }
+
+        &_next {
+            margin-left: 20px;
+        }
+    }
+
+
+}
+
+.extra {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    &__like {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &_button {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border: none;
+            padding: 3px 5px;
+        }
+    }
+
+    &__info {
+
+        &_summary::marker {
+            content: url(/hw3/img/details.png);
+        }
+
+        &_summary {
+            font-size: larger;
+        }
+
+        &_text {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            margin-top: 10px;
+
+        }
+    }
+
+    &__history {
+
+        display: flex;
+        align-items: center;
+
+        &_title {
+            font-size: larger;
+
+        }
+
+        &_close {
+            visibility: hidden;
+            margin-left: 10px;
+        }
+
+
+    }
+
+}
+
+.extra__info[open] .extra__info_text {
+    display: block;
+    animation: fadeIn 0.75s linear forwards;
+}
+
+.extra__info:not([open]) .extra__info_text {
+    animation: fadeOut 0.75s linear forwards;
+}
